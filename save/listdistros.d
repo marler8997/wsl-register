@@ -1,7 +1,7 @@
 #!/usr/bin/env rund
 //!debug
 //!debugSymbols
-//!importPath .
+//!importPath ..
 
 /**
 This tool lists the distributions on your system.
@@ -27,6 +27,7 @@ int main(string[] args)
         return 1; // fail
 
     const distros = tryGetDistros();
+    writefln("Found %s distros:", distros.length);
     foreach (distro; distros)
     {
         writeln("--------------------------------------------------------");
